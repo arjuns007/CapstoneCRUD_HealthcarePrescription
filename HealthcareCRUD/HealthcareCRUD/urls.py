@@ -24,4 +24,5 @@ urlpatterns = [
     path('Insert',views.Insertpat,name="Insertpat"),
     # path('Insert',views.Insertpat,name="Insertpat"),
     path('delete/<int:id>', views.destroy),
+    path('Edit/<int:id>', views.Editpat,name="Editpat"),
 ]

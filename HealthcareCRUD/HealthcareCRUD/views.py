@@ -38,6 +38,9 @@ def destroy(request, id):
     obj.delete()  
     return redirect("/Index") 
 
+def Editpat(request,id):
+    editpatobj = PatModel.objects.get(id=id)  
+    return render(request,'Edit.html',{"PatModel":editpatobj})
 
        
        

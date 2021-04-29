@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Capstone CRUD- Healthcare Prescription</title>
+</head>
+
+<body>
+    
+    <center>
+        <h1>UPDATE PATIENT RECORDS</h1> 
+        <hr>
+        <a href="{% url 'Insertpat'%}">Insert New Patient Details</a>
+        <table border="4">
+        <tr>
+            <td>Patient ID</td>
+            <td><input type="text" name="id" value="{{PatModel.id}}" readonly></td>
+
+        </tr>
+        <tr>
+            <td>Patient Name</td>
+            <td><input type="text" name="patientname" value="{{PatModel.patientname}}"></td>
+
+        </tr>
+         <tr>
+            <td>Sex</td>
+            <td><input type="text" name="sex" value="{{PatModel.sex}}"></td>
+
+        </tr>
+         <tr>
+            <td>Sex</td>
+            <td><input type="text" name="sex" value="{{PatModel.sex}}"></td>
+
+        </tr>
+
+           
+        </table>
+       <a href="{% url 'showpat' %}">Back To Home Screen</a>
+    </center>
+
+</body>
+
+</html>
