@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Capstone CRUD- Healthcare Prescription</title>
+</head>
+<body>
+    <center>
+        <h1>Django CRUD Project on Healthcare Prescription</h1>
+        <h3>Developed By- ARJUN SETH </h3>
+        <hr>
+        <table border="4">
+            <tr>
+                <th>Patient ID</th>
+                <th>Patient Name</th>
+                <th>Sex</th>
+                <th>DOB</th>
+                <th>Phone Number</th>
+                <th>E-Mail Address</th>
+                <th>Patient Address</th>
+                <th>Disease</th>
+                <th>Consulting Doctor Name</th>
+                <th>Drug</th>
+                <th>Drug Strength</th>
+                <th>Drug Duration</th>
+                <th>Prescription Advice</th>
+                <th>Concluding Remarks (If Any)</th>
+            </tr>
+            {%for result in data%}
+            <tr>
+                <td>{{result.id}}</td>
+                <td>{{result.patientname}}</td>
+                <td>{{result.sex}}</td>
+                <td>{{result.dob}}</td>
+                <td>{{result.phone}}</td>
+                <td>{{result.email}}</td>
+                <td>{{result.address}}</td>
+                <td>{{result.disease}}</td>
+                <td>{{result.doctor}}</td>
+                <td>{{result.drug}}</td>
+                <td>{{result.drugstrength}}</td>
+                <td>{{result.drugduration}}</td>
+                <td>{{result.prescriptionadvice}}</td>
+                <td>{{result.remarks}}</td>
+                
+                
+            </tr>
+            {%endfor%}
+        </table>
+    </center>
+    
+</body>
+</html>
