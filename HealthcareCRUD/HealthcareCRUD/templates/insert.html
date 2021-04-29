@@ -13,6 +13,7 @@
         <hr>
         <form method="POST">
             {%csrf_token%}
+            <a href="{% url 'showpat' %}">Back To Home Screen</a>
             <table border="4">
                 <tr>
                     <td>Patient Name</td>
@@ -90,6 +91,17 @@
                     <td><textarea name="remarks"></textarea></td>
                 </tr>
 
+                <tr>
+                    <td><input type="submit" value="Insert"></td>
+                    <td>
+                        {%if messages%}
+                        {%for mess in messages%}
+                        <b style="color:red">{{mess}}</b>
+                        {%endfor%}
+                        {%endif%}
+                    </td>
+                </tr>
+
 
                 <tr>
                     <td>{{result.id}}</td>
@@ -111,11 +123,7 @@
                 </tr>
 
             </table>
-            {%if messages%}
-            {%for mess in messages%}
-            <b style="color:red">{{mess}}</b>
-            {%endfor%}
-            {%endif%}
+
         </form>
     </center>
 

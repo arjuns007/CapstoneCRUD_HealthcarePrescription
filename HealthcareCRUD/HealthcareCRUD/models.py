@@ -4,7 +4,7 @@ class PatModel(models.Model):
     patientname=models.CharField(max_length=150)
     sex=models.CharField(max_length=1)
     dob=models.DateField()
-    phone=models.IntegerField()
+    phone=models.CharField(max_length=10)
     email=models.CharField(max_length=150)
     address=models.CharField(max_length=350)
     disease=models.CharField(max_length=150)

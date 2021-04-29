@@ -29,6 +29,7 @@
                 <th>Drug Duration</th>
                 <th>Prescription Advice</th>
                 <th>Concluding Remarks (If Any)</th>
+                <th>Options</th>
             </tr>
             {%for result in data%}
             <tr>
@@ -46,6 +47,12 @@
                 <td>{{result.drugduration}}</td>
                 <td>{{result.prescriptionadvice}}</td>
                 <td>{{result.remarks}}</td>
+                <td>
+                    <a href="/delete/{{ result.id }}">Delete</a>
+                    <a href="">Edit</a>
+                  </td>   
+
+
 
 
             </tr>
