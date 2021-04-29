@@ -15,3 +15,6 @@ class PatModel(models.Model):
     prescriptionadvice=models.CharField(max_length=150)
     remarks=models.CharField(max_length=150)
 
+    class Meta:
+        db_table="patient"
+
