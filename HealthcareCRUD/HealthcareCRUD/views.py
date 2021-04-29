@@ -24,8 +24,8 @@ def Insertpat(request):
             saverecord.prescriptionadvice=request.POST.get('prescriptionadvice')
             saverecord.remarks=request.POST.get('remarks')
             saverecord.save()
-            messages.success( request,'Patient'+saverecord.patientname+'Details Saved Successfully!')
-            return render(request,'Insert.html')
+            messages.success(request,'Patient'+saverecord.patientname+'Details Saved Successfully!')
+            return render(request,'templates/Insert.html')
         else:
-            return render(request,'Insert.html')
+            return render(request,'templates/Insert.html')
             

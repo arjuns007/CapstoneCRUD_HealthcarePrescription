@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Capstone CRUD- Healthcare Prescription</title>
+</head>
+
+<body>
+    <center>
+        <h1>INSERT PATIENT RECORD </h1>
+        <hr>
+        <form method="POST">
+            {%csrf_token%}
+            <table border="4">
+                <tr>
+                    <td>Patient Name</td>
+                    <td><input type="text" placeholder="Enter Patient Name" name="patientname"></td>
+                </tr>
+
+                <tr>
+                    <td>Sex</td>
+                    <td><input type="radio" name="sex" value="M">Male</td>
+                    <td><input type="radio" name="sex" value="F">Female</td>
+                    <td><input type="radio" name="sex" value="O">Other</td>
+
+                </tr>
+                <tr>
+                    <td>DOB</td>
+                    <td><input type="date" name="dob"></td>
+                </tr>
+                <tr>
+                    <td>Phone Number</td>
+                    <td><input type="number" name="phone"></td>
+                </tr>
+                <tr>
+                    <td>E-Mail Address</td>
+                    <td><input type="text" name="email"></td>
+                </tr>
+                <tr>
+                    <td>Patient Address</td>
+                    <td><textarea name="address"></textarea></td>
+                </tr>
+                <tr>
+                    <td>Disease</td>
+                    <td><input type="text" name="disease"></td>
+                </tr>
+                <tr>
+                    <td>Consulting Doctor Name</td>
+                    <td><input type="text" name="doctor"></td>
+                </tr>
+                <tr>
+                    <td>Drug</td>
+                    <td><input type="text" name="drug"></td>
+                </tr>
+                <tr>
+                    <td>Drug Strength</td>
+                    <td>
+                        <select name="drugstrength">
+                            <option select disabled=true>Select Drug Strength</option>
+                            <option>1 MG</option>
+                            <option>2️ MG</option>
+                            <option>3️ MG</option>
+                            <option>4 MG</option>
+                            <option>5 MG</option>
+                            <option>6 MG</option>
+                            <option>7 MG</option>
+                            <option>8 MG</option>
+                            <option>9 MG</option>
+                            <option>10 MG</option>
+                            <option>11 MG</option>
+                            <option>12 MG</option>
+                            <option>13 MG</option>
+                            <option>14 MG</option>
+                            <option>15 MG</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Drug Duration</td>
+                    <td><input type="text" name="drugduration"></td>
+                </tr>
+                <tr>
+                    <td>Prescription Advice</td>
+                    <td><textarea name="prescriptionadvice"></textarea></td>
+                </tr>
+                <tr>
+                    <td>Concluding Remarks (If Any)</td>
+                    <td><textarea name="remarks"></textarea></td>
+                </tr>
+
+
+                <tr>
+                    <td>{{result.id}}</td>
+                    <td>{{result.patientname}}</td>
+                    <td>{{result.sex}}</td>
+                    <td>{{result.dob}}</td>
+                    <td>{{result.phone}}</td>
+                    <td>{{result.email}}</td>
+                    <td>{{result.address}}</td>
+                    <td>{{result.disease}}</td>
+                    <td>{{result.doctor}}</td>
+                    <td>{{result.drug}}</td>
+                    <td>{{result.drugstrength}}</td>
+                    <td>{{result.drugduration}}</td>
+                    <td>{{result.prescriptionadvice}}</td>
+                    <td>{{result.remarks}}</td>
+
+
+                </tr>
+
+            </table>
+            {%if messages%}
+            {%for mess in messages%}
+            <b style="color:red">{{mess}}</b>
+            {%endfor%}
+            {%endif%}
+        </form>
+    </center>
+
+</body>
+
+</html>
