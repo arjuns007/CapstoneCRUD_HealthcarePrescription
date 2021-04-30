@@ -12,67 +12,83 @@
     <center>
         <h1>UPDATE PATIENT RECORDS</h1>
         <hr>
-        <table border="4">
-            <tr>
-                <td>Patient ID</td>
-                <td><input type="text" name="id" value="{{PatModel.id}}" readonly></td>
+        <form method="POST" action="/Update/{{PatModel.id}}">
 
-            </tr>
-            <tr>
-                <td>Patient Name</td>
-                <td><input type="text" name="patientname" value="{{PatModel.patientname}}"></td>
+            {%csrf_token%}
+            <table border="4">
+                <tr>
+                    <td>Patient ID</td>
+                    <td><input type="text" name="id" value="{{PatModel.id}}" readonly></td>
 
-            </tr>
-            <tr>
-                <td>Sex</td>
-                <td><input type="text" name="sex" value="{{PatModel.sex}}"></td>
+                </tr>
+                <tr>
+                    <td>Patient Name</td>
+                    <td><input type="text" name="patientname" value="{{PatModel.patientname}}"></td>
 
-            </tr>
-            <tr>
-                <td>DOB</td>
-                <td><input type="date" name="dob" value="{{PatModel.dob}}"></td>
-            </tr>
-            </tr>
-            <tr>
-                <td>Phone Number</td>
-                <td><input type="number" name="phone" value="{{PatModel.phone}}"></td>
-            </tr>
-            <tr>
-                <td>E-Mail Address</td>
-                <td><input type="text" name="email" value="{{PatModel.email}}"></td>
-            </tr>
-            <tr>
-                <td>Patient Address</td>
-                <td><textarea name="address" value="{{PatModel.address}}"></textarea></td>
-            </tr>
-            <tr>
-                <td>Disease</td>
-                <td><input type="text" name="disease" value="{{PatModel.disease}}"></td>
-            </tr>
-            <tr>
-                <td>Consulting Doctor Name</td>
-                <td><input type="text" name="doctor" value="{{PatModel.doctor}}"></td>
-            </tr>
-            <tr>
-                <td>Drug</td>
-                <td><input type="text" name="drug" value="{{PatModel.drug}}"></td>
-            </tr>
-            <tr>
-                <td>Drug Strength</td>
-                <td><input type="text" name="drugstrength" value="{{PatModel.drugstrength}}"></td>
-            </tr>
-            <tr>
-                <td>Drug Duration</td>
-                <td><input type="text" name="drugduration" value="{{PatModel.drugduration}}"></td>
-            </tr>
-            <tr>
-                <td>Prescription Advice</td>
-                <td><textarea name="prescriptionadvice" value="{{PatModel.prescriptionadvice}}"></textarea></td>
-            </tr>
-            <tr>
-                <td>Concluding Remarks (If Any)</td>
-                <td><textarea name="remarks" value="{{PatModel.remarks}}"></textarea></td>
-            </tr>
+                </tr>
+                <tr>
+                    <td>Sex</td>
+                    <td><input type="text" name="sex" value="{{PatModel.sex}}"></td>
+
+                </tr>
+                <tr>
+                    <td>DOB</td>
+                    <td><input type="date" name="dob" value="{{PatModel.dob}}"></td>
+                </tr>
+                </tr>
+                <tr>
+                    <td>Phone Number</td>
+                    <td><input type="number" name="phone" value="{{PatModel.phone}}"></td>
+                </tr>
+                <tr>
+                    <td>E-Mail Address</td>
+                    <td><input type="text" name="email" value="{{PatModel.email}}"></td>
+                </tr>
+                <tr>
+                    <td>Patient Address</td>
+                    <td><textarea name="address">{{PatModel.address}}</textarea></td>
+                </tr>
+                <tr>
+                    <td>Disease</td>
+                    <td><input type="text" name="disease" value="{{PatModel.disease}}"></td>
+                </tr>
+                <tr>
+                    <td>Consulting Doctor Name</td>
+                    <td><input type="text" name="doctor" value="{{PatModel.doctor}}"></td>
+                </tr>
+                <tr>
+                    <td>Drug</td>
+                    <td><input type="text" name="drug" value="{{PatModel.drug}}"></td>
+                </tr>
+                <tr>
+                    <td>Drug Strength</td>
+                    <td><input type="text" name="drugstrength" value="{{PatModel.drugstrength}}"></td>
+                </tr>
+                <tr>
+                    <td>Drug Duration</td>
+                    <td><input type="text" name="drugduration" value="{{PatModel.drugduration}}"></td>
+                </tr>
+                <tr>
+                    <td>Prescription Advice</td>
+                    <td><textarea name="prescriptionadvice">{{PatModel.prescriptionadvice}}</textarea></td>
+                </tr>
+                <tr>
+                    <td>Concluding Remarks (If Any)</td>
+                    <td><textarea name="remarks">{{PatModel.remarks}}</textarea></td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <input type="submit" value="Update Record">
+                    <td>
+                        {%if messages%}
+                        {%for mess in messages%}
+                        <b style="color:red">{{mess}}</b>
+                        {%endfor%}
+                        {%endif%}
+                    </td>
+                    </td>
+                </tr>
 
 
 
@@ -81,8 +97,10 @@
 
 
 
-        </table>
-        <a href="{% url 'showpat' %}">Back To Home Screen</a>
+            </table>
+
+            <a href="{% url 'showpat' %}">Back To Home Screen</a>
+        </form>
     </center>
 
 </body>
