@@ -16,6 +16,8 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from . import views
+from django.conf import settings
+from django.conf.urls.static import static
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -26,5 +28,10 @@ urlpatterns = [
     path('delete/<int:id>', views.destroy),
     path('Edit/<int:id>', views.Editpat, name="Editpat"),
     path('Update/<int:id>', views.updatepat, name="updatepat"),
+    path('upload/', views.image_upload_view,name='imgupload'),
+    # path('showimg/', views.showimg,name='showimg'),
 
 ]
+if settings.DEBUG:
+    urlpatterns += static(settings.MEDIA_URL,
+                          document_root=settings.MEDIA_ROOT)

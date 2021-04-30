@@ -18,3 +18,10 @@ class PatModel(models.Model):
     class Meta:
         db_table="patient"
 
+class Image(models.Model):
+    title = models.CharField(max_length=200)
+    image = models.ImageField(upload_to='images')
+
+    class Meta:
+        db_table="image"
+
