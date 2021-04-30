@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,6 +6,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Capstone CRUD- Healthcare Prescription</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
 </head>
 
 <body>
@@ -92,7 +95,7 @@
                 </tr>
 
                 <tr>
-                    <td><input type="submit" value="Insert"></td>
+                    <td><input type="submit" value="Insert" class="btn"></td>
                     <td>
                         {%if messages%}
                         {%for mess in messages%}

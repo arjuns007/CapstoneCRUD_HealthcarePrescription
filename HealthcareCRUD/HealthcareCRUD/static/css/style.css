@@ -1,0 +1,33 @@
+*{
+    background-image: url("/static/images/img.jpg") ;
+}
+h1,h2,h3{
+    color:crimson;
+}
+a {
+    display: block;
+    width: auto;
+    height: auto;
+    background: #4E9CAF;
+    padding: auto;
+    text-align: center;
+    border-radius: auto;
+    color: white;
+    font-weight: bold;
+    line-height: 25px;
+    
+  }
+.btn{
+    display: block;
+    width: auto;
+    height: auto;
+    background: #4E9CAF;
+    padding: auto;
+    text-align: center;
+    border-radius: auto;
+    color: white;
+    font-weight: bold;
+    line-height: 25px;
+}
+  
+ 
