@@ -17,51 +17,51 @@
         <form method="POST">
             {%csrf_token%}
             <a href="{% url 'showpat' %}">Back To Home Screen</a>
-            <table border="4">
+            <table border="4" class="styled-table">
                 <tr>
                     <td>Patient Name</td>
-                    <td><input type="text" placeholder="Enter Patient Name" name="patientname"></td>
+                    <td><input type="text" placeholder="Enter Patient Name" name="patientname" class="input"></td>
                 </tr>
 
                 <tr>
                     <td>Sex</td>
-                    <td><input type="radio" name="sex" value="M">Male</td>
-                    <td><input type="radio" name="sex" value="F">Female</td>
-                    <td><input type="radio" name="sex" value="O">Other</td>
+                    <td><input type="radio" name="sex" value="M" class="input">Male</td>
+                    <td><input type="radio" name="sex" value="F" class="input">Female</td>
+                    <td><input type="radio" name="sex" value="O" class="input">Other</td>
 
                 </tr>
                 <tr>
                     <td>DOB</td>
-                    <td><input type="date" name="dob"></td>
+                    <td><input type="date" name="dob" class="input"></td>
                 </tr>
                 <tr>
                     <td>Phone Number</td>
-                    <td><input type="number" name="phone"></td>
+                    <td><input type="number" name="phone" class="input"></td>
                 </tr>
                 <tr>
                     <td>E-Mail Address</td>
-                    <td><input type="text" name="email"></td>
+                    <td><input type="text" name="email" class="input"></td>
                 </tr>
                 <tr>
                     <td>Patient Address</td>
-                    <td><textarea name="address"></textarea></td>
+                    <td><textarea name="address" class="input"></textarea></td>
                 </tr>
                 <tr>
                     <td>Disease</td>
-                    <td><input type="text" name="disease"></td>
+                    <td><input type="text" name="disease" class="input"></td>
                 </tr>
                 <tr>
                     <td>Consulting Doctor Name</td>
-                    <td><input type="text" name="doctor"></td>
+                    <td><input type="text" name="doctor" class="input"></td>
                 </tr>
                 <tr>
                     <td>Drug</td>
-                    <td><input type="text" name="drug"></td>
+                    <td><input type="text" name="drug" class="input"></td>
                 </tr>
                 <tr>
                     <td>Drug Strength</td>
                     <td>
-                        <select name="drugstrength">
+                        <select name="drugstrength" class="input">
                             <option select disabled=true>Select Drug Strength</option>
                             <option>1 MG</option>
                             <option>2️ MG</option>
@@ -83,15 +83,15 @@
                 </tr>
                 <tr>
                     <td>Drug Duration</td>
-                    <td><input type="text" name="drugduration"></td>
+                    <td><input type="text" name="drugduration" class="input"></td>
                 </tr>
                 <tr>
                     <td>Prescription Advice</td>
-                    <td><textarea name="prescriptionadvice"></textarea></td>
+                    <td><textarea name="prescriptionadvice" class="input"></textarea></td>
                 </tr>
                 <tr>
                     <td>Concluding Remarks (If Any)</td>
-                    <td><textarea name="remarks"></textarea></td>
+                    <td><textarea name="remarks" class="input"></textarea></td>
                 </tr>
 
                 <tr>

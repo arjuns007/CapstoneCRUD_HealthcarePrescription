@@ -18,66 +18,66 @@
         <form method="POST" action="/Update/{{PatModel.id}}">
 
             {%csrf_token%}
-            <table border="4">
+            <table border="4" class="styled-table">
                 <tr>
                     <td>Patient ID</td>
-                    <td><input type="text" name="id" value="{{PatModel.id}}" readonly></td>
+                    <td><input type="text" name="id" value="{{PatModel.id}}" class="input" readonly></td>
 
                 </tr>
                 <tr>
                     <td>Patient Name</td>
-                    <td><input type="text" name="patientname" value="{{PatModel.patientname}}"></td>
+                    <td><input type="text" name="patientname" value="{{PatModel.patientname}}" class="input"></td>
 
                 </tr>
                 <tr>
                     <td>Sex</td>
-                    <td><input type="text" name="sex" value="{{PatModel.sex}}"></td>
+                    <td><input type="text" name="sex" value="{{PatModel.sex}}" class="input"></td>
 
                 </tr>
                 <tr>
                     <td>DOB</td>
-                    <td><input type="date" name="dob" value="{{PatModel.dob}}"></td>
+                    <td><input type="date" name="dob" value="{{PatModel.dob}}" class="input"></td>
                 </tr>
                 </tr>
                 <tr>
                     <td>Phone Number</td>
-                    <td><input type="number" name="phone" value="{{PatModel.phone}}"></td>
+                    <td><input type="number" name="phone" value="{{PatModel.phone}}" class="input"></td>
                 </tr>
                 <tr>
                     <td>E-Mail Address</td>
-                    <td><input type="text" name="email" value="{{PatModel.email}}"></td>
+                    <td><input type="text" name="email" value="{{PatModel.email}}" class="input"></td>
                 </tr>
                 <tr>
                     <td>Patient Address</td>
-                    <td><textarea name="address">{{PatModel.address}}</textarea></td>
+                    <td><textarea name="address" class="input">{{PatModel.address}}</textarea></td>
                 </tr>
                 <tr>
                     <td>Disease</td>
-                    <td><input type="text" name="disease" value="{{PatModel.disease}}"></td>
+                    <td><input type="text" name="disease" value="{{PatModel.disease}}" class="input"></td>
                 </tr>
                 <tr>
                     <td>Consulting Doctor Name</td>
-                    <td><input type="text" name="doctor" value="{{PatModel.doctor}}"></td>
+                    <td><input type="text" name="doctor" value="{{PatModel.doctor}}" class="input"></td>
                 </tr>
                 <tr>
                     <td>Drug</td>
-                    <td><input type="text" name="drug" value="{{PatModel.drug}}"></td>
+                    <td><input type="text" name="drug" value="{{PatModel.drug}}" class="input"></td>
                 </tr>
                 <tr>
                     <td>Drug Strength</td>
-                    <td><input type="text" name="drugstrength" value="{{PatModel.drugstrength}}"></td>
+                    <td><input type="text" name="drugstrength" value="{{PatModel.drugstrength}}" class="input"></td>
                 </tr>
                 <tr>
                     <td>Drug Duration</td>
-                    <td><input type="text" name="drugduration" value="{{PatModel.drugduration}}"></td>
+                    <td><input type="text" name="drugduration" value="{{PatModel.drugduration}}" class="input"></td>
                 </tr>
                 <tr>
                     <td>Prescription Advice</td>
-                    <td><textarea name="prescriptionadvice">{{PatModel.prescriptionadvice}}</textarea></td>
+                    <td><textarea name="prescriptionadvice" class="input">{{PatModel.prescriptionadvice}}</textarea></td>
                 </tr>
                 <tr>
                     <td>Concluding Remarks (If Any)</td>
-                    <td><textarea name="remarks">{{PatModel.remarks}}</textarea></td>
+                    <td><textarea name="remarks" class="input">{{PatModel.remarks}}</textarea></td>
                 </tr>
 
                 <tr>
