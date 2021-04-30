@@ -1,7 +1,13 @@
-<form method="post" enctype="multipart/form-data">
+<head>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<form method="post"  enctype="multipart/form-data">
     {% csrf_token %}
     {{ form.as_p }}
     <button type="submit">Upload</button>
+    <a href="/">Back To Home Screen</a>
+
 </form>
 
 
@@ -10,3 +16,15 @@
 <img src="{{ img_obj.image.url}}" alt="connect" style="max-height:300px">
 {% endif %}
 
+{% load static %}
+
+{% for image in images %}
+<img src="{{ static }}/media/images/{{image}}" alt="image" style="max-height:300px">
+{% endfor %}
+
+
+
+<!-- {%for img in showimg%}
+    <img src="/{{ BASIC_DIR }}/{{img.img}}" width="120"/>   
+
+{%endfor%} -->

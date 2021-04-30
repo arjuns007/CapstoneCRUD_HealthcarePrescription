@@ -4,6 +4,7 @@ from django.contrib import messages
 from HealthcareCRUD.forms import Patforms
 from .forms import ImageForm
 from HealthcareCRUD.models import Image
+import os 
 
 
 def showpat(request):
@@ -61,16 +62,23 @@ def updatepat(request, id):
 
 def image_upload_view(request):
     """Process images uploaded by users"""
+    path="/Users/arjunseth/Desktop/CapstoneCRUD_HealthcarePrescription/HealthcareCRUD/media/images"  # insert the path to your directory   
+    img_list =os.listdir(path)   
     if request.method == 'POST':
         form = ImageForm(request.POST, request.FILES)
         if form.is_valid():
             form.save()
             # Get the current instance object to display in the template
             img_obj = form.instance
-            return render(request, 'img.html', {'form': form, 'img_obj': img_obj})
+            return render(request, 'img.html', {'form': form, 'img_obj': img_obj,'images': img_list})
     else:
         form = ImageForm()
-    return render(request, 'img.html', {'form': form})
+    return render(request, 'img.html', {'form': form,'images': img_list})
 # def showimg(request):
 #     showimg = Image.objects.all()
+#     print(Image.image)
 #     return render(request, 'img.html', {"showimg": showimg})
+# def showimg(request):
+#     path="/Users/arjunseth/Desktop/CapstoneCRUD_HealthcarePrescription/HealthcareCRUD/media/images"  # insert the path to your directory   
+#     img_list =os.listdir(path)   
+#     return render(request, 'img.html', {'images': img_list})
