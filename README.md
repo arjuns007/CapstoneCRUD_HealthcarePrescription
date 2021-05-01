@@ -19,4 +19,4 @@ TECH-STACK : HTML,CSS,DJANGO and PostgreSQL.
 ![Screenshot 2021-05-01 at 1 52 47 PM](https://user-images.githubusercontent.com/44583018/116776278-21d65900-aa85-11eb-96c3-c37c80436b20.png)
 ![Screenshot 2021-05-01 at 1 53 09 PM](https://user-images.githubusercontent.com/44583018/116776280-2438b300-aa85-11eb-957e-a9236a460975.png)
 ![Screenshot 2021-05-01 at 1 54 16 PM](https://user-images.githubusercontent.com/44583018/116776281-269b0d00-aa85-11eb-9dc4-f09a79976277.png)
-![Screenshot 2021-05-01 at 1 54 23 PM](https://user-images.githubusercontent.com/44583018/116776282-28fd6700-aa85-11eb-9fd4-9afd8e59a0ef.png)
+![Screenshot 2021-05-01 at 1 54 23 PM](https://user-images.githubusercontent.com/44583018/116776282-28fd6700-aa85-11eb-9fd4-9afd8e59a0ef.png).
