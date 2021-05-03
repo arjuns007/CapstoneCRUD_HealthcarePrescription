@@ -2,6 +2,22 @@
 A HealthCare Prescription website that is basically used for a patient's all medical-related information. The doctor can provide all the necessary prescription details about the patient and the same can be viewed by the patient itself.Doctor can also upload the prescription report as image on the website and the images are all dynamic. CRUD application built over Django.
 
 TECH-STACK : HTML,CSS,DJANGO and PostgreSQL.
+<div align="center">
+
+
+ 
+  [![GitHub release](https://img.shields.io/github/release/Naereen/StrapDown.js.svg)](https://GitHub.com/Naereen/StrapDown.js/releases/)
+  [![Status](https://img.shields.io/badge/status-active-success.svg)]() 
+  [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE.md)
+  [![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://GitHub.com/Naereen/StrapDown.js/graphs/commit-activity)
+
+
+</div>
+
+## 🎉 Badges <a name = "badges"></a>
+[![forthebadge made-with-python](http://ForTheBadge.com/images/badges/made-with-python.svg)](https://www.python.org/)
+[![ForTheBadge built-by-developers](http://ForTheBadge.com/images/badges/built-by-developers.svg)](https://GitHub.com/Naereen/)
+[![ForTheBadge built-with-swag](http://ForTheBadge.com/images/badges/built-with-swag.svg)](https://GitHub.com/Naereen/)
 
 ![Screenshot 2021-05-01 at 1 38 46 PM](https://user-images.githubusercontent.com/44583018/116776221-f0f62400-aa84-11eb-82a9-a6ff8ba33eba.png)
 ![Screenshot 2021-05-01 at 1 40 53 PM](https://user-images.githubusercontent.com/44583018/116776227-f3587e00-aa84-11eb-956b-0b8294af7e56.png)
